@@ -7,9 +7,6 @@ on:
 jobs:
   build:
    
-    strategy:
-      matrix:
-        configuration: [Debug]
     runs-on: windows-latest
     
     env:
@@ -17,7 +14,7 @@ jobs:
   
     steps:
     - name: Checkout
-    - uses: actions/checkout@v2
+      uses: actions/checkout@v2
       with:
            fetch-depth: 0
            
