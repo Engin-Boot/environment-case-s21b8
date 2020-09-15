@@ -12,12 +12,11 @@ jobs:
         configuration: [Debug]
     runs-on: windows-latest
     
-    env:
-      Solution_Name: EnvironmentalMonitoringReciever.sln
+    
      
     steps:
     - name: Checkout
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v1
       
    # Add  MSBuild to the PATH: https://github.com/microsoft/setup-msbuild
     - name: Setup MSBuild.exe
