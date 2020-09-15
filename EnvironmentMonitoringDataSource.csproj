@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{E9CAB6C6-D45A-458C-B1B9-1BC57387AB58}</ProjectGuid>
+    <ProjectGuid>{27526A32-D56B-4334-B07F-5ADB055329CC}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>EnvironmentalMonitoringReciever</RootNamespace>
-    <AssemblyName>EnvironmentalMonitoringReciever</AssemblyName>
+    <RootNamespace>EnvironmentMonitoringDataSource</RootNamespace>
+    <AssemblyName>EnvironmentMonitoringDataSource</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,13 +43,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Alert.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ValueChecker.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ReadWriteFunctionality\ReadWriteFunctionality.csproj">
+      <Project>{53903047-26b7-444b-bcc7-ad9b0310cda6}</Project>
+      <Name>ReadWriteFunctionality</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

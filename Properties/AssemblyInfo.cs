@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("EnvironmentalMonitoringReciever")]
+[assembly: AssemblyTitle("EnvironmentMonitoringDataSource")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("EnvironmentalMonitoringReciever")]
+[assembly: AssemblyProduct("EnvironmentMonitoringDataSource")]
 [assembly: AssemblyCopyright("Copyright ©  2020")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("e9cab6c6-d45a-458c-b1b9-1bc57387ab58")]
+[assembly: Guid("27526a32-d56b-4334-b07f-5adb055329cc")]
 
 // Version information for an assembly consists of the following four values:
 //
