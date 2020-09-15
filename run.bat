@@ -1,5 +1,5 @@
 pushd "%~dp0"
 
-EnvironmentalMonitoringReciever/bin/debug/EnvironmentalMonitoringReciever.exe
+C:/Users/320087877/source/repos/EnvironmentalMonitoringReciever/EnvironmentalMonitoringReciever/bin/debug/EnvironmentalMonitoringReciever.exe
 
 popd
