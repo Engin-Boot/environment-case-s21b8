@@ -7,6 +7,9 @@ on:
 jobs:
   build:
     runs-on: windows-latest
+    
+    env:
+      Solution_Name: EnvironmentMonitoringDataSource.sln
         
     steps:
     - name: Checkout
