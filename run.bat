@@ -1,1 +1,1 @@
-dotnet run -p TelCo.ColorCoder
+dotnet run -p EnvironmentalMonitoringReciever
