@@ -9,7 +9,7 @@ jobs:
     runs-on: windows-latest
     
     env:
-      Solution_Name: EnvironmentMonitoring.sln
+      Solution_Name: EnvironmentalMonitoringReciever.sln
      
     steps:
     - name: Checkout
