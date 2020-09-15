@@ -1,1 +1,5 @@
-dotnet run -p EnvironmentalMonitoringReciever
+pushd "%~dp0"
+
+EnvironmentalMonitoringReciever.exe
+
+popd
