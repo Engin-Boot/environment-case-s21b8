@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnvironmentalMonitoringReci
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sender", "EMSender\Sender.csproj", "{237A2EE7-5AC9-4068-B670-7F1E4ED6F63F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sender.Tests", "Sender.Tests\Sender.Tests.csproj", "{5573B5C2-4CB9-4F0A-A6E5-A67E9FB0D9A4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{237A2EE7-5AC9-4068-B670-7F1E4ED6F63F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{237A2EE7-5AC9-4068-B670-7F1E4ED6F63F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{237A2EE7-5AC9-4068-B670-7F1E4ED6F63F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5573B5C2-4CB9-4F0A-A6E5-A67E9FB0D9A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5573B5C2-4CB9-4F0A-A6E5-A67E9FB0D9A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5573B5C2-4CB9-4F0A-A6E5-A67E9FB0D9A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5573B5C2-4CB9-4F0A-A6E5-A67E9FB0D9A4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
