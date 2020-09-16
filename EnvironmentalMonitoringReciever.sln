@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.28307.329
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnvironmentalMonitoringReciever", "EnvironmentalMonitoringReciever\EnvironmentalMonitoringReciever.csproj", "{E9CAB6C6-D45A-458C-B1B9-1BC57387AB58}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sender", "EMSender\Sender.csproj", "{237A2EE7-5AC9-4068-B670-7F1E4ED6F63F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sender", "Sender\Sender.csproj", "{237A2EE7-5AC9-4068-B670-7F1E4ED6F63F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sender.Tests", "Sender.Tests\Sender.Tests.csproj", "{5573B5C2-4CB9-4F0A-A6E5-A67E9FB0D9A4}"
 EndProject
