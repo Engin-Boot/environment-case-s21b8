@@ -11,7 +11,7 @@ namespace Sender.Tests
     {
         Sender.HelperFunctions testObject = new HelperFunctions();
         private string emptyTestPath = " ";
-        private string validTestPath = AppDomain.CurrentDomain.BaseDirectory + "TemperatureHumiditySampleData.csv ";
+        private string validTestPath = "TemperatureHumiditySampleData.csv ";
         string status;
         [Fact]
         public void ValidatePath_ShouldCheckIfFileExists()
