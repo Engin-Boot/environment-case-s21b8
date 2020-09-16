@@ -1,6 +1,0 @@
-C:\Users\320087992\Documents\Bootcamp\environment-case-s21b8\Sender\bin\Debug\Sender.dll
-C:\Users\320087992\Documents\Bootcamp\environment-case-s21b8\Sender\bin\Debug\Sender.pdb
-C:\Users\320087992\Documents\Bootcamp\environment-case-s21b8\Sender\obj\Debug\Sender.csprojAssemblyReference.cache
-C:\Users\320087992\Documents\Bootcamp\environment-case-s21b8\Sender\obj\Debug\Sender.csproj.CoreCompileInputs.cache
-C:\Users\320087992\Documents\Bootcamp\environment-case-s21b8\Sender\obj\Debug\Sender.dll
-C:\Users\320087992\Documents\Bootcamp\environment-case-s21b8\Sender\obj\Debug\Sender.pdb
