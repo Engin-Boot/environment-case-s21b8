@@ -1,0 +1,6 @@
+C:\Users\320087992\Documents\Bootcamp\environment-case-s21b8\EnvironmentMonitoringSender\bin\Debug\EnvironmentMonitoringSender.exe.config
+C:\Users\320087992\Documents\Bootcamp\environment-case-s21b8\EnvironmentMonitoringSender\bin\Debug\EnvironmentMonitoringSender.exe
+C:\Users\320087992\Documents\Bootcamp\environment-case-s21b8\EnvironmentMonitoringSender\bin\Debug\EnvironmentMonitoringSender.pdb
+C:\Users\320087992\Documents\Bootcamp\environment-case-s21b8\EnvironmentMonitoringSender\obj\Debug\Sender.csproj.CoreCompileInputs.cache
+C:\Users\320087992\Documents\Bootcamp\environment-case-s21b8\EnvironmentMonitoringSender\obj\Debug\EnvironmentMonitoringSender.exe
+C:\Users\320087992\Documents\Bootcamp\environment-case-s21b8\EnvironmentMonitoringSender\obj\Debug\EnvironmentMonitoringSender.pdb

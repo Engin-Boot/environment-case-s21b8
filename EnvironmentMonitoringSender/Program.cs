@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Sender
 {
-    public class Driver
+    class Program
     {
         static void Main(string[] args)
         {
