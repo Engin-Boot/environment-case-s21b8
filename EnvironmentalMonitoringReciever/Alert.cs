@@ -20,6 +20,7 @@ namespace EnvironmentalMonitoringReciever
         public void TemperatureHighErrorLevel()
         {
            Console.WriteLine("The Temperature is critically high..");
+
         }
         public void TemperatureLowErrorLevel()
         {
