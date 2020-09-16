@@ -1,6 +1,0 @@
-C:\Users\320087992\source\repos\EnvironmentMonitoringDataSource\ReadWriteFunctionality\bin\Debug\ReadWriteFunctionality.dll
-C:\Users\320087992\source\repos\EnvironmentMonitoringDataSource\ReadWriteFunctionality\bin\Debug\ReadWriteFunctionality.pdb
-C:\Users\320087992\source\repos\EnvironmentMonitoringDataSource\ReadWriteFunctionality\obj\Debug\ReadWriteFunctionality.csprojAssemblyReference.cache
-C:\Users\320087992\source\repos\EnvironmentMonitoringDataSource\ReadWriteFunctionality\obj\Debug\ReadWriteFunctionality.csproj.CoreCompileInputs.cache
-C:\Users\320087992\source\repos\EnvironmentMonitoringDataSource\ReadWriteFunctionality\obj\Debug\ReadWriteFunctionality.dll
-C:\Users\320087992\source\repos\EnvironmentMonitoringDataSource\ReadWriteFunctionality\obj\Debug\ReadWriteFunctionality.pdb
