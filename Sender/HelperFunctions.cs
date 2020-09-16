@@ -15,68 +15,104 @@ namespace Sender
                 return false;
         }
 
-        public void ReadFileWithHeader(string path)
+        public string ReadFileWithHeader(string path)
         {
-            lineNumber = 0;
-            fileContents = new Dictionary<int, string>();
-            using (var reader = new StreamReader(path))
+            if (ValidatePath(path))
             {
-                while (!reader.EndOfStream)
+                lineNumber = 0;
+
+                using (var reader = new StreamReader(path))
                 {
-                    line = reader.ReadLine();
-                    lineNumber += 1;
-
-                    if (fileContents.ContainsKey(lineNumber))
-                        fileContents[lineNumber] = line;
-                    else
-                        fileContents.Add(lineNumber, line);
-                }
-            }
-        }
-
-        public void ExtractDelimiterSeparatedRowValues(char delimiter)
-        {
-            foreach (KeyValuePair<int, string> keyValue in fileContents)
-            {
-                int lineNumber = keyValue.Key;
-                string line = keyValue.Value;
-
-                values = line.Split(delimiter);
-                if (lineNumber == 1)
-                    columnNames = values;
-                else
-                {
-                    for (int i = 0; i < values.Length; i++)
+                    while (!reader.EndOfStream)
                     {
-                        columnValues.Add(values[i]);
+                        line = reader.ReadLine();
+                        lineNumber += 1;
+
+                        if (fileContents.ContainsKey(lineNumber))
+                            fileContents[lineNumber] = line;
+                        else
+                            fileContents.Add(lineNumber, line);
                     }
                 }
+                status = "File read successfully!";
             }
+            else
+            {
+                status = "File not found in the specified path...";
+            }
+            return status;
         }
-        public void CheckAndReplaceEmptyValues()
+        private string status = "";
+        public string ExtractDelimiterSeparatedValues(char delimiter)
         {
+            if (fileContents.Count > 0)
+            {
+                foreach (KeyValuePair<int, string> keyValue in fileContents)
+                {
+                    int lineNumber = keyValue.Key;
+                    string line = keyValue.Value;
+                    values = line.Split(delimiter);
+
+                    if (!line.Contains(delimiter.ToString()))
+                        status = "Delimiter not in file...";
+                    else
+                        status = "Correct delimiter supplied...";
+
+                    if (lineNumber == 1)
+                        columnNames = values;
+                    else
+                    {
+                        for (int i = 0; i < values.Length; i++)
+                        {
+                            columnValues.Add(values[i]);
+                        }
+                    }
+                }
+
+            }
+            else
+            {
+                status = "File read operation not performed...";
+
+            }
+            return status;
+        }
+        public string CheckAndReplaceEmptyValues()
+        {
+
             if (columnValues.Count != 0)
             {
+                noOfColumns = columnNames.GetLength(0);
                 for (int i = 0; i < columnValues.Count; i++)
                 {
                     if (columnValues[i] == "")
                         columnValues[i] = ValueNotPresent;
                 }
+                status = "Column values extracted successfully...";
             }
             else
             {
-                Console.WriteLine("Column Values not extracted...");
+                noOfColumns = 0;
+                status = "Column Values not extracted...";
             }
-
+            return status;
         }
-        public void RedirectOutputToConsole()
+        public string RedirectFileOutputToConsole()
         {
-            noOfColumns = columnNames.GetLength(0);
-            for (int i = 0; i < columnValues.Count; i++)
+            if (columnValues.Count > 0)
             {
-                int columnno = i % noOfColumns;
-                WriteToConsole(columnNames[columnno], columnValues[i]);
+                for (int i = 0; i < columnValues.Count; i++)
+                {
+                    int columnno = i % noOfColumns;
+                    WriteToConsole(columnNames[columnno], columnValues[i]);
+                }
+                status = "Redirection to console successfull...";
             }
+            else
+            {
+                status = "No column values present. Cannot redirect output to console...";
+            }
+            return status;
         }
 
         public void WriteToConsole(string columnName, string value)
@@ -88,14 +124,12 @@ namespace Sender
 
         private int lineNumber;
         private string line;
-        Dictionary<int, string> fileContents;
+        private Dictionary<int, string> fileContents = new Dictionary<int, string>();
 
-        private string[] columnNames;
-        private string[] values;
+        private string[] columnNames = { };
+        public string[] values;
 
         private int noOfColumns;
-        private HelperFunctions getHelperFunction;
-
-        List<string> columnValues = new List<string>();
+        private List<string> columnValues = new List<string>();
     }
 }
