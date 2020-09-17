@@ -1,6 +1,7 @@
 {
   "version": 3,
   "targets": {
+<<<<<<< HEAD
     ".NETCoreApp,Version=v3.1": {
       "Microsoft.CodeCoverage/15.9.0": {
         "type": "package",
@@ -5838,33 +5839,41 @@
         "xunit.runner.visualstudio.nuspec"
       ]
     }
+=======
+    ".NETCoreApp,Version=v3.1": {}
+>>>>>>> 38ff5323619894b59ff3311a1eb4fdfc29aad8ff
   },
+  "libraries": {},
   "projectFileDependencyGroups": {
+<<<<<<< HEAD
     ".NETCoreApp,Version=v3.1": [
       "Microsoft.NET.Test.Sdk >= 15.9.0",
       "Microsoft.NETCore.App >= 2.1.0",
       "xunit >= 2.4.0",
       "xunit.runner.visualstudio >= 2.4.0"
     ]
+=======
+    ".NETCoreApp,Version=v3.1": []
+>>>>>>> 38ff5323619894b59ff3311a1eb4fdfc29aad8ff
   },
   "packageFolders": {
-    "C:\\Users\\320087877\\.nuget\\packages\\": {},
+    "C:\\Users\\320087992\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\320087877\\OneDrive - Philips\\Documents\\GitHub\\environment-case-s21b8\\Reciever.Tests\\Reciever.Tests.csproj",
+      "projectUniqueName": "C:\\Users\\320087992\\Documents\\Bootcamp\\environment-case-s21b8\\Reciever.Tests\\Reciever.Tests.csproj",
       "projectName": "Reciever.Tests",
-      "projectPath": "C:\\Users\\320087877\\OneDrive - Philips\\Documents\\GitHub\\environment-case-s21b8\\Reciever.Tests\\Reciever.Tests.csproj",
-      "packagesPath": "C:\\Users\\320087877\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\320087877\\OneDrive - Philips\\Documents\\GitHub\\environment-case-s21b8\\Reciever.Tests\\obj\\",
+      "projectPath": "C:\\Users\\320087992\\Documents\\Bootcamp\\environment-case-s21b8\\Reciever.Tests\\Reciever.Tests.csproj",
+      "packagesPath": "C:\\Users\\320087992\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\320087992\\Documents\\Bootcamp\\environment-case-s21b8\\Reciever.Tests\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\320087877\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\320087992\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -5872,8 +5881,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {},
-        "https://artifactory.pic.philips.com:8443/artifactory/api/nuget/ct-local-nuget": {}
+        "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp3.1": {
@@ -5888,6 +5896,7 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
+<<<<<<< HEAD
         "dependencies": {
           "Microsoft.NET.Test.Sdk": {
             "target": "Package",
@@ -5907,6 +5916,8 @@
             "version": "[2.4.0, )"
           }
         },
+=======
+>>>>>>> 38ff5323619894b59ff3311a1eb4fdfc29aad8ff
         "imports": [
           "net461"
         ],

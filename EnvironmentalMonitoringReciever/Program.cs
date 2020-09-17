@@ -3,14 +3,19 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 
-
 namespace EnvironmentalMonitoringReciever
 {
     class Program
     {
+<<<<<<< HEAD
         static List<string> inputvalues=new List<string>();
         
         static void Main(string[] args)
+=======
+       
+
+        static void Main()
+>>>>>>> 38ff5323619894b59ff3311a1eb4fdfc29aad8ff
         {
             string s;
             while ((s = Console.ReadLine()) != null)
@@ -22,12 +27,29 @@ namespace EnvironmentalMonitoringReciever
             rd.ParseInputList();
             
         }
+<<<<<<< HEAD
         
         public class ReadConsoleOutput
         {
             
             public int val;
             internal void temperatureread(string input)
+=======
+        public class OutputCapture : TextWriter
+        {
+            private readonly TextWriter _stdOutWriter;
+            public TextWriter Captured { get; }
+            public override Encoding Encoding => Encoding.ASCII;
+
+            public OutputCapture()
+            {
+                this._stdOutWriter = Console.Out;
+                Console.SetOut(this);
+                Captured = new StringWriter();
+            }
+
+            public override void Write(string output)
+>>>>>>> 38ff5323619894b59ff3311a1eb4fdfc29aad8ff
             {
                 string tmp=input.Split(':')[1].TrimStart();
                 
@@ -42,6 +64,11 @@ namespace EnvironmentalMonitoringReciever
                     value.Temperature(val);
                 }
                 
+<<<<<<< HEAD
+=======
+                Captured.Write(output);
+                _stdOutWriter.Write(output);
+>>>>>>> 38ff5323619894b59ff3311a1eb4fdfc29aad8ff
             }
             internal void humidityread(string input)
             {
@@ -50,6 +77,7 @@ namespace EnvironmentalMonitoringReciever
                 ValueChecker value = new ValueChecker();
                 value.Humidity(val);
 
+<<<<<<< HEAD
             }
             public void ParseInputList()
             {
@@ -66,6 +94,13 @@ namespace EnvironmentalMonitoringReciever
                         rd.humidityread(input);
                     }
                 }
+=======
+            public override void WriteLine(string output)
+            {
+               
+                Captured.WriteLine(output);
+                _stdOutWriter.WriteLine(output);
+>>>>>>> 38ff5323619894b59ff3311a1eb4fdfc29aad8ff
             }
 
         }

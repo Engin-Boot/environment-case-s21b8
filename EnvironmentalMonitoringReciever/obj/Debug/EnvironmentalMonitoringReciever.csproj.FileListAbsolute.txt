@@ -11,3 +11,10 @@ C:\Users\320087877\OneDrive - Philips\Documents\GitHub\environment-case-s21b8\En
 C:\Users\320087877\OneDrive - Philips\Documents\GitHub\environment-case-s21b8\EnvironmentalMonitoringReciever\obj\Debug\EnvironmentalMonitoringReciever.csproj.CoreCompileInputs.cache
 C:\Users\320087877\OneDrive - Philips\Documents\GitHub\environment-case-s21b8\EnvironmentalMonitoringReciever\obj\Debug\EnvironmentalMonitoringReciever.exe
 C:\Users\320087877\OneDrive - Philips\Documents\GitHub\environment-case-s21b8\EnvironmentalMonitoringReciever\obj\Debug\EnvironmentalMonitoringReciever.pdb
+C:\Users\320087992\Documents\Bootcamp\environment-case-s21b8\EnvironmentalMonitoringReciever\bin\Debug\EnvironmentalMonitoringReciever.exe.config
+C:\Users\320087992\Documents\Bootcamp\environment-case-s21b8\EnvironmentalMonitoringReciever\bin\Debug\EnvironmentalMonitoringReciever.exe
+C:\Users\320087992\Documents\Bootcamp\environment-case-s21b8\EnvironmentalMonitoringReciever\bin\Debug\EnvironmentalMonitoringReciever.pdb
+C:\Users\320087992\Documents\Bootcamp\environment-case-s21b8\EnvironmentalMonitoringReciever\obj\Debug\EnvironmentalMonitoringReciever.csprojAssemblyReference.cache
+C:\Users\320087992\Documents\Bootcamp\environment-case-s21b8\EnvironmentalMonitoringReciever\obj\Debug\EnvironmentalMonitoringReciever.csproj.CoreCompileInputs.cache
+C:\Users\320087992\Documents\Bootcamp\environment-case-s21b8\EnvironmentalMonitoringReciever\obj\Debug\EnvironmentalMonitoringReciever.exe
+C:\Users\320087992\Documents\Bootcamp\environment-case-s21b8\EnvironmentalMonitoringReciever\obj\Debug\EnvironmentalMonitoringReciever.pdb
