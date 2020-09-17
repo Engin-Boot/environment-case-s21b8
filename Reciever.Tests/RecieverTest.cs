@@ -6,9 +6,9 @@ namespace Reciever.Tests
     public class RecieverTest
     {
         [Fact]
-        public void Test1()
+        public void WhenTempratureIsInWarningLevelThenSendAlert()
         {
-
+                    
         }
     }
 }
