@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+using System.IO;
 using System.Text;
-using System.Threading.Tasks;
 
 
 namespace EnvironmentalMonitoringReciever
@@ -13,18 +11,43 @@ namespace EnvironmentalMonitoringReciever
 
         static void Main(string[] args)
         {
+            using (var outputCapture = new OutputCapture())
+            {
+                
+                Console.WriteLine("50");
+                var stuff = outputCapture.Captured.ToString();
+                int val = Convert.ToInt32(stuff);
+                ValueChecker valueChecker = new ValueChecker();
+                valueChecker.Temperature(val);
+            }
+        }
+        public class OutputCapture : TextWriter, IDisposable
+        {
+            private TextWriter stdOutWriter;
+            public TextWriter Captured { get; private set; }
+            public override Encoding Encoding { get { return Encoding.ASCII; } }
+
+            public OutputCapture()
+            {
+                this.stdOutWriter = Console.Out;
+                Console.SetOut(this);
+                Captured = new StringWriter();
+            }
+
+            override public void Write(string output)
+            {
+                
+                Captured.Write(output);
+                stdOutWriter.Write(output);
+            }
+
+            override public void WriteLine(string output)
+            {
+               
+                Captured.WriteLine(output);
+                stdOutWriter.WriteLine(output);
+            }
            
-            ValueChecker valueChecker = new ValueChecker();
-            Console.Write("Enter Integer: ");
-            string val = Console.ReadLine();
-            int a = Convert.ToInt32(val);
-            Console.WriteLine("Your input: {0}", a);
-
-            
-            valueChecker.Temperature(a);
-            valueChecker.Humidity(a);
-
-
 
         }
     }
