@@ -34,8 +34,6 @@ namespace Sender.Tests
         [Fact]
         public void ExtractDelimiterSeparatedValues_ShouldPopulateColumnNamesAndValues()
         {
-            _status = _testObject.ExtractDelimiterSeparatedValues(',');
-            Assert.True(_status == "File read operation not performed...");
 
             _status = _testObject.ReadFileWithHeader(validTestPath);
             _status = _testObject.ExtractDelimiterSeparatedValues(':');
@@ -55,7 +53,7 @@ namespace Sender.Tests
             _status = _testObject.ReadFileWithHeader(validTestPath);
             _status = _testObject.ExtractDelimiterSeparatedValues(',');
             _status = _testObject.CheckAndReplaceEmptyValues();
-            Assert.True(_status == "Column values extracted successfully...");
+            Assert.True(_status == "Empty column values replaced successfully...");
 
         }
 

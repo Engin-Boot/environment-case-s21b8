@@ -29,11 +29,8 @@ namespace Sender
                     {
                         _line = reader.ReadLine();
                         _lineNumber += 1;
+                        _fileContents.Add(_lineNumber, _line);
 
-                        if (_fileContents.ContainsKey(_lineNumber))
-                            _fileContents[_lineNumber] = _line;
-                        else
-                            _fileContents.Add(_lineNumber, _line);
                     }
                 }
 
@@ -54,33 +51,27 @@ namespace Sender
 
         public string ExtractDelimiterSeparatedValues(char delimiter)
         {
-            if (_fileContents.Count > 0)
+            foreach (KeyValuePair<int, string> keyValue in _fileContents)
             {
-                foreach (KeyValuePair<int, string> keyValue in _fileContents)
+                
+                int lineNumber = keyValue.Key;
+                string line = keyValue.Value;
+                Values = line.Split(delimiter);
+
+                _status = !line.Contains(delimiter.ToString()) ? "Delimiter not in file..." : "Correct delimiter supplied...";
+
+                if (lineNumber == 1)
+                    _columnNames = Values;
+                else
                 {
-                    int lineNumber = keyValue.Key;
-                    string line = keyValue.Value;
-                    Values = line.Split(delimiter);
-
-                    _status = !line.Contains(delimiter.ToString()) ? "Delimiter not in file..." : "Correct delimiter supplied...";
-
-                    if (lineNumber == 1)
-                        _columnNames = Values;
-                    else
+                    foreach (var value in Values)
                     {
-                        foreach (var value in Values)
-                        {
-                            _columnValues.Add(value);
-                        }
+                        _columnValues.Add(value);
                     }
                 }
-
             }
-            else
-            {
-                _status = "File read operation not performed...";
-
-            }
+            
+          
             return _status;
         }
 
@@ -90,6 +81,7 @@ namespace Sender
         #region CheckAndReplaceEmptyValues: Checks for empty values and replaces them with "Value not present"
         public string CheckAndReplaceEmptyValues()
         {
+            _status = "Column Values not extracted...";
 
             if (_columnValues.Count != 0)
             {
@@ -99,13 +91,9 @@ namespace Sender
                     if (_columnValues[i] == "")
                         _columnValues[i] = ValueNotPresent;
                 }
-                _status = "Column values extracted successfully...";
+                _status = "Empty column values replaced successfully...";
             }
-            else
-            {
-                _noOfColumns = 0;
-                _status = "Column Values not extracted...";
-            }
+            
             return _status;
         }
 
@@ -157,7 +145,7 @@ namespace Sender
         private readonly Dictionary<int, string> _fileContents = new Dictionary<int, string>();
         private string[] _columnNames = { };
         public string[] Values;
-        private int _noOfColumns;
+        private int _noOfColumns = 0;
         private string _status = "";
         private readonly List<string> _columnValues = new List<string>();
         #endregion
