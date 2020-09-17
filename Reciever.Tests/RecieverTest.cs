@@ -7,10 +7,12 @@ namespace Reciever.Tests
     {
         public bool alertIsSent = false;
         public string calledMessage;
-        public void temperaturecheck(int tempvalue)
+        public int sentvalue;
+        public void temperaturecheck(int tempvalue,string message)
         {
             alertIsSent = true;
             calledMessage = message;
+            sentvalue = tempvalue;
         }
 
     }
@@ -23,10 +25,11 @@ namespace Reciever.Tests
         public void WhenTempratureIsHighInWarningLevelThenSendAlert()
         {
             Reciever rec = new Reciever();
-            rec.temperaturecheck(39);
+            
             Assert.True(rec.alertIsSent);
             //Assert.True(rec.alertIsSent=="The Temperature is high..");
             Assert.True(rec.calledMessage == "The Temperature is high..");
+            Assert.True(rec.sentvalue == 40);
         }
         
     }
