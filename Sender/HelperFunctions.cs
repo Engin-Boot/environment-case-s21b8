@@ -83,16 +83,13 @@ namespace Sender
         {
             _status = "Column Values not extracted...";
 
-            if (_columnValues.Count != 0)
+            _noOfColumns = _columnNames.GetLength(0);
+            for (int i = 0; i < _columnValues.Count; i++)
             {
-                _noOfColumns = _columnNames.GetLength(0);
-                for (int i = 0; i < _columnValues.Count; i++)
-                {
-                    if (_columnValues[i] == "")
-                        _columnValues[i] = ValueNotPresent;
-                }
-                _status = "Empty column values replaced successfully...";
+                if (_columnValues[i] == "")
+                    _columnValues[i] = ValueNotPresent;
             }
+            _status = "Empty column values replaced successfully...";
 
             return _status;
         }
