@@ -68,13 +68,13 @@ namespace Reciever.Tests
             Debug.Assert("The Temperature is critically low..");
         }
         [Fact]
-        public void WhenTempratureIsHighInWarningLevelThenSendAlert()
+        public void WhenHumidityIsHighInWarningLevelThenSendAlert()
         {
             rec.humiditycheck(75);
             Debug.Assert("The Humidity is high..");
         }
         [Fact]
-        public void WhenTempratureIsHighInErrorLevelThenSendAlert()
+        public void WhenHumidityIsHighInErrorLevelThenSendAlert()
         {
             rec.humiditycheck(75);
             Debug.Assert("The Humidity is critically high..");
