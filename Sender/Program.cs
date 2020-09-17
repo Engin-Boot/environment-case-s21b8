@@ -11,7 +11,7 @@ namespace Sender
         static void Main(string[] args)
         {
             //string path = "";
-            string validTestPath = @"C:\Users\320087992\Documents\Bootcamp\environment-case-s21b8\TemperatureHumiditySampleData.csv ";
+            string validTestPath = @"D:\a\environment-case-s21b8\environment-case-s21b8\TemperatureHumiditySampleData.csv";
 
             HelperFunctions csvFile = new HelperFunctions();
             string ReadFileWithHeader_status = csvFile.ReadFileWithHeader(validTestPath);
