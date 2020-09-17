@@ -24,8 +24,9 @@ namespace Reciever.Tests
         {
             Reciever rec = new Reciever();
             rec.temperaturecheck(39);
-            Assrt.True(rec.alertIsSent);
-            Assert.True(rec.alertIsSent=="The Temperature is high..");
+            Assert.True(rec.alertIsSent);
+            //Assert.True(rec.alertIsSent=="The Temperature is high..");
+            Assert.True(rec.calledMessage == "The Temperature is high..");
         }
         
     }
