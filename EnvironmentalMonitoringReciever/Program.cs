@@ -2,14 +2,13 @@
 using System.IO;
 using System.Text;
 
-
 namespace EnvironmentalMonitoringReciever
 {
     class Program
     {
        
 
-        static void Main(string[] args)
+        static void Main()
         {
             using (var outputCapture = new OutputCapture())
             {
@@ -21,31 +20,31 @@ namespace EnvironmentalMonitoringReciever
                 valueChecker.Temperature(val);
             }
         }
-        public class OutputCapture : TextWriter, IDisposable
+        public class OutputCapture : TextWriter
         {
-            private TextWriter stdOutWriter;
-            public TextWriter Captured { get; private set; }
-            public override Encoding Encoding { get { return Encoding.ASCII; } }
+            private readonly TextWriter _stdOutWriter;
+            public TextWriter Captured { get; }
+            public override Encoding Encoding => Encoding.ASCII;
 
             public OutputCapture()
             {
-                this.stdOutWriter = Console.Out;
+                this._stdOutWriter = Console.Out;
                 Console.SetOut(this);
                 Captured = new StringWriter();
             }
 
-            override public void Write(string output)
+            public override void Write(string output)
             {
                 
                 Captured.Write(output);
-                stdOutWriter.Write(output);
+                _stdOutWriter.Write(output);
             }
 
-            override public void WriteLine(string output)
+            public override void WriteLine(string output)
             {
                
                 Captured.WriteLine(output);
-                stdOutWriter.WriteLine(output);
+                _stdOutWriter.WriteLine(output);
             }
            
 
