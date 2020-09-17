@@ -1,13 +1,6 @@
 {
   "version": 3,
   "targets": {
-<<<<<<< Updated upstream
-    ".NETCoreApp,Version=v2.1": {}
-  },
-  "libraries": {},
-  "projectFileDependencyGroups": {
-    ".NETCoreApp,Version=v2.1": []
-=======
     ".NETCoreApp,Version=v2.1": {
       "Microsoft.CodeCoverage/15.9.0": {
         "type": "package",
@@ -5853,7 +5846,6 @@
       "xunit >= 2.4.0",
       "xunit.runner.visualstudio >= 2.4.0"
     ]
->>>>>>> Stashed changes
   },
   "packageFolders": {
     "C:\\Users\\320087877\\.nuget\\packages\\": {},
@@ -5896,8 +5888,6 @@
     },
     "frameworks": {
       "netcoreapp2.1": {
-<<<<<<< Updated upstream
-=======
         "dependencies": {
           "Microsoft.NET.Test.Sdk": {
             "target": "Package",
@@ -5917,7 +5907,6 @@
             "version": "[2.4.0, )"
           }
         },
->>>>>>> Stashed changes
         "imports": [
           "net461"
         ],
