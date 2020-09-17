@@ -53,7 +53,7 @@ namespace Sender
         {
             foreach (KeyValuePair<int, string> keyValue in _fileContents)
             {
-                
+
                 int lineNumber = keyValue.Key;
                 string line = keyValue.Value;
                 Values = line.Split(delimiter);
@@ -70,8 +70,8 @@ namespace Sender
                     }
                 }
             }
-            
-          
+
+
             return _status;
         }
 
@@ -93,7 +93,7 @@ namespace Sender
                 }
                 _status = "Empty column values replaced successfully...";
             }
-            
+
             return _status;
         }
 
