@@ -6,65 +6,71 @@ namespace Sender
 {
     public class HelperFunctions
     {
-        public const string ValueNotPresent = "Value Not Present";
+        #region ValidatePath: returns if the given file exists in the specified path
+
         public bool ValidatePath(string path)
         {
-            if (File.Exists(path))
-                return true;
-            else
-                return false;
+            return File.Exists(path);
         }
 
+        #endregion
+
+
+        #region ReadFileWithHeader: reads file having column names
         public string ReadFileWithHeader(string path)
         {
             if (ValidatePath(path))
             {
-                lineNumber = 0;
+                _lineNumber = 0;
 
                 using (var reader = new StreamReader(path))
                 {
                     while (!reader.EndOfStream)
                     {
-                        line = reader.ReadLine();
-                        lineNumber += 1;
+                        _line = reader.ReadLine();
+                        _lineNumber += 1;
 
-                        if (fileContents.ContainsKey(lineNumber))
-                            fileContents[lineNumber] = line;
+                        if (_fileContents.ContainsKey(_lineNumber))
+                            _fileContents[_lineNumber] = _line;
                         else
-                            fileContents.Add(lineNumber, line);
+                            _fileContents.Add(_lineNumber, _line);
                     }
                 }
-                status = "File read successfully!";
+
+                _status = "File read successfully!";
             }
             else
             {
-                status = "File not found in the specified path...";
+                _status = "File not found in the specified path...";
             }
-            return status;
+            return _status;
         }
-        private string status = "";
+
+
+        #endregion
+
+
+        #region ExtractDelimiterSeparatedValues: extract values given a valid delimiter
+
         public string ExtractDelimiterSeparatedValues(char delimiter)
         {
-            if (fileContents.Count > 0)
+            if (_fileContents.Count > 0)
             {
-                foreach (KeyValuePair<int, string> keyValue in fileContents)
+                foreach (KeyValuePair<int, string> keyValue in _fileContents)
                 {
                     int lineNumber = keyValue.Key;
                     string line = keyValue.Value;
-                    values = line.Split(delimiter);
+                    Values = line.Split(delimiter);
 
-                    if (!line.Contains(delimiter.ToString()))
-                        status = "Delimiter not in file...";
-                    else
-                        status = "Correct delimiter supplied...";
+                    _status = !line.Contains(delimiter.ToString()) ? "Delimiter not in file..." : "Correct delimiter supplied...";
 
                     if (lineNumber == 1)
-                        columnNames = values;
+                        _columnNames = Values;
                     else
                     {
-                        for (int i = 0; i < values.Length; i++)
+                        foreach (var value in Values)
                         {
-                            columnValues.Add(values[i]);
+                            _columnValues.Add(value);
                         }
                     }
                 }
@@ -72,64 +78,90 @@ namespace Sender
             }
             else
             {
-                status = "File read operation not performed...";
+                _status = "File read operation not performed...";
 
             }
-            return status;
+            return _status;
         }
+
+        #endregion
+
+
+
+        #region CheckAndReplaceEmptyValues: Checks for empty values and replaces them with "Value not present"
         public string CheckAndReplaceEmptyValues()
         {
 
-            if (columnValues.Count != 0)
+            if (_columnValues.Count != 0)
             {
-                noOfColumns = columnNames.GetLength(0);
-                for (int i = 0; i < columnValues.Count; i++)
+                _noOfColumns = _columnNames.GetLength(0);
+                for (int i = 0; i < _columnValues.Count; i++)
                 {
-                    if (columnValues[i] == "")
-                        columnValues[i] = ValueNotPresent;
+                    if (_columnValues[i] == "")
+                        _columnValues[i] = ValueNotPresent;
                 }
-                status = "Column values extracted successfully...";
+                _status = "Column values extracted successfully...";
             }
             else
             {
-                noOfColumns = 0;
-                status = "Column Values not extracted...";
+                _noOfColumns = 0;
+                _status = "Column Values not extracted...";
             }
-            return status;
-        }
-        public string RedirectFileOutputToConsole()
-        {
-            if (columnValues.Count > 0)
-            {
-                for (int i = 0; i < columnValues.Count; i++)
-                {
-                    int columnno = i % noOfColumns;
-                    WriteToConsole(columnNames[columnno], columnValues[i]);
-                }
-                status = "Redirection to console successfull...";
-            }
-            else
-            {
-                status = "No column values present. Cannot redirect output to console...";
-            }
-            return status;
+            return _status;
         }
 
+
+        #endregion
+
+
+        #region RedirectFileOutputToConsole: Calls WriteToConsole to print
+        public string RedirectFileOutputToConsole()
+        {
+            if (_columnValues.Count > 0)
+            {
+                for (int i = 0; i < _columnValues.Count; i++)
+                {
+                    int column = i % _noOfColumns;
+                    WriteToConsole(_columnNames[column], _columnValues[i]);
+                }
+                _status = "Redirection to console successful...";
+            }
+            else
+            {
+                _status = "No column values present. Cannot redirect output to console...";
+            }
+            return _status;
+        }
+
+
+        #endregion
+
+
+        #region WriteToconsole Function: prints to console
         public void WriteToConsole(string columnName, string value)
         {
             Console.WriteLine(columnName + ": " + value + " ");
         }
 
 
+        #endregion
 
-        private int lineNumber;
-        private string line;
-        private Dictionary<int, string> fileContents = new Dictionary<int, string>();
 
-        private string[] columnNames = { };
-        public string[] values;
+        #region constants
 
-        private int noOfColumns;
-        private List<string> columnValues = new List<string>();
+        public const string ValueNotPresent = "Value Not Present";
+        #endregion
+
+        #region variables
+        private int _lineNumber;
+        private string _line;
+        private readonly Dictionary<int, string> _fileContents = new Dictionary<int, string>();
+        private string[] _columnNames = { };
+        public string[] Values;
+        private int _noOfColumns;
+        private string _status = "";
+        private readonly List<string> _columnValues = new List<string>();
+        #endregion
+
     }
 }
