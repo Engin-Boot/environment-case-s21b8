@@ -47,37 +47,37 @@ namespace Reciever.Tests
         public void WhenTempratureIsHighInWarningLevelThenSendAlert()
         {
             rec.temperaturecheck(39);
-            Debug.Assert("The Temperature is high..");
+            Assert.True("Tshe Temperature is high..");
         }
         [Fact]
         public void WhenTempratureIsHighInErrorLevelThenSendAlert()
         {
             rec.temperaturecheck(55);
-            Debug.Assert("The Temperature is critically high..");
+            Assert.True("The Temperature is critically high..");
         }
         [Fact]
         public void WhenTempratureIsLowInWarningLevelThenSendAlert()
         {
             rec.temperaturecheck(3);
-            Debug.Assert("The Temperature is Low..");
+            Assert.True("The Temperature is Low..");
         }
         [Fact]
         public void WhenTempratureIsLowInErrorLevelThenSendAlert()
         {
             rec.temperaturecheck(0);
-            Debug.Assert("The Temperature is critically low..");
+            Assert.True("The Temperature is critically low..");
         }
         [Fact]
         public void WhenHumidityIsHighInWarningLevelThenSendAlert()
         {
             rec.humiditycheck(75);
-            Debug.Assert("The Humidity is high..");
+            Assert.True("The Humidity is high..");
         }
         [Fact]
         public void WhenHumidityIsHighInErrorLevelThenSendAlert()
         {
             rec.humiditycheck(75);
-            Debug.Assert("The Humidity is critically high..");
+            Assert.True("The Humidity is critically high..");
         }
     }
 }
