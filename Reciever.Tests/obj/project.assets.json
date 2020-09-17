@@ -1,7 +1,10 @@
 {
   "version": 3,
   "targets": {
+<<<<<<< Updated upstream
 <<<<<<< HEAD
+=======
+>>>>>>> Stashed changes
     ".NETCoreApp,Version=v3.1": {
       "Microsoft.CodeCoverage/15.9.0": {
         "type": "package",
@@ -5845,7 +5848,10 @@
   },
   "libraries": {},
   "projectFileDependencyGroups": {
+<<<<<<< Updated upstream
 <<<<<<< HEAD
+=======
+>>>>>>> Stashed changes
     ".NETCoreApp,Version=v3.1": [
       "Microsoft.NET.Test.Sdk >= 15.9.0",
       "Microsoft.NETCore.App >= 2.1.0",
@@ -5896,7 +5902,10 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
+<<<<<<< Updated upstream
 <<<<<<< HEAD
+=======
+>>>>>>> Stashed changes
         "dependencies": {
           "Microsoft.NET.Test.Sdk": {
             "target": "Package",
