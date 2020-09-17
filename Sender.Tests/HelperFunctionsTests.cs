@@ -1,4 +1,5 @@
-﻿using Xunit;
+﻿using System;
+using Xunit;
 
 namespace Sender.Tests
 {
@@ -7,6 +8,7 @@ namespace Sender.Tests
         readonly HelperFunctions _testObject = new HelperFunctions();
         private readonly string emptyTestPath = " ";
         private readonly string validTestPath = @"D:\a\environment-case-s21b8\environment-case-s21b8\TemperatureHumiditySampleData.csv";
+        //private readonly string validTestPath = @"C:\Users\320087992\Documents\Bootcamp\environment-case-s21b8\TemperatureHumiditySampleData.csv";
         string _status;
         [Fact]
         public void ValidatePath_ShouldCheckIfFileExists()

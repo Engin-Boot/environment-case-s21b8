@@ -88,8 +88,9 @@ namespace Sender
             {
                 if (_columnValues[i] == "")
                     _columnValues[i] = ValueNotPresent;
+                _status = "Empty column values replaced successfully...";
             }
-            _status = "Empty column values replaced successfully...";
+           
 
             return _status;
         }
