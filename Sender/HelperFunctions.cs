@@ -87,7 +87,6 @@ namespace Sender
         #endregion
 
 
-
         #region CheckAndReplaceEmptyValues: Checks for empty values and replaces them with "Value not present"
         public string CheckAndReplaceEmptyValues()
         {

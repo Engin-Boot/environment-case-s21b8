@@ -1,44 +1,38 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace EnvironmentalMonitoringReciever
+﻿namespace EnvironmentalMonitoringReciever
 {
     class ValueChecker
     {
-        public void Temperature(int TemperatureValue)
+        public void Temperature(int temperatureValue)
         {
             TemperatureAlert temperatureAlert = new TemperatureAlert();
-            if (TemperatureValue>=37&&TemperatureValue<40)
+            if (temperatureValue>=37&&temperatureValue<40)
             {
                 temperatureAlert.TemperatureHighWarningLevel();
             }
-            else if(TemperatureValue>40)
+            else if(temperatureValue>40)
             {
                 temperatureAlert.TemperatureHighErrorLevel();
             }
-           if(TemperatureValue>=0&&TemperatureValue<4)
+            if(temperatureValue>=0&&temperatureValue<4)
             {
                 temperatureAlert.TemperatureLowWarningLevel();
 
             }
-            else if(TemperatureValue<0)
+            else if(temperatureValue<0)
             {
                 temperatureAlert.TemperatureLowErrorLevel();
             }
           
                
         }
-        public void Humidity(float HumidityValue)
+        public void Humidity(float humidityValue)
         {
             HumidityAlert humidityAlert = new HumidityAlert();
-            if(HumidityValue>=70)
+            if(humidityValue>=70)
             {
                 humidityAlert.HumidityHighWarningLevel();
             }
-            else if(HumidityValue>=90)
+            else if(humidityValue>=90)
             {
                 humidityAlert.HumidityHighErrorLevel();
             }
