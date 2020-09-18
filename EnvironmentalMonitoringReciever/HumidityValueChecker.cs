@@ -1,26 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace EnvironmentalMonitoringReciever
+﻿namespace EnvironmentalMonitoringReciever
 {
-    class HumidityValueChecker
+    public class HumidityValueChecker
     {
-        public void Humidity(float humidityValue)
+        string _logstatus;
+        public string Humidity(float humidityValue)
         {
             HumidityAlert humidityAlert = new HumidityAlert();
             if (humidityValue > 70)
             {
                 humidityAlert.HumidityHighWarningLevel();
+                _logstatus = "Humidity is in warning level";
+                
             }
-            else if (humidityValue > 90)
+            if (humidityValue > 90)
             {
                 humidityAlert.HumidityHighErrorLevel();
+                _logstatus = "Humidity is in error level";
+                
             }
 
-
+            return _logstatus;
         }
     }
 }
