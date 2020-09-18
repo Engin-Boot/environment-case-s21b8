@@ -6,21 +6,26 @@ using System.Threading.Tasks;
 
 namespace EnvironmentalMonitoringReciever
 {
-    class HumidityValueChecker
+    public class HumidityValueChecker
     {
-        public void Humidity(float humidityValue)
+        string logstatus;
+        public string Humidity(float humidityValue)
         {
             HumidityAlert humidityAlert = new HumidityAlert();
             if (humidityValue > 70)
             {
                 humidityAlert.HumidityHighWarningLevel();
+                logstatus = "Humidity is in warning level";
+                
             }
-            else if (humidityValue > 90)
+            if (humidityValue > 90)
             {
                 humidityAlert.HumidityHighErrorLevel();
+                logstatus = "Humidity is in error level";
+                
             }
 
-
+            return logstatus;
         }
     }
 }

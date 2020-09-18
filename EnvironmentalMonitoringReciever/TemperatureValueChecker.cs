@@ -2,39 +2,51 @@
 
 namespace EnvironmentalMonitoringReciever
 {
-    class TemperatureValueChecker
+
+    public class TemperatureValueChecker
     {
-       
-        
-            TemperatureAlert temperatureAlert = new TemperatureAlert();
-        
-
-        public void Temperature(int temperatureValue)
+        string logstatus;
+       TemperatureAlert temperatureAlert = new TemperatureAlert();
+        public string Temperature(int temperatureValue)
             {
 
-            if (temperatureValue > 37 && temperatureValue < 40)
+            if (temperatureValue>37 )
             {
-                temperatureAlert.TemperatureHighWarningLevel();
+                Temperature1(temperatureValue);
+                logstatus = "Temperature is in  high warning level";
             }
-            else if (temperatureValue > 40)
+            if (temperatureValue < 4)
+            {
+                Temperature2(temperatureValue);
+                logstatus = "Temperature is in  low warning level";
+            }
+            
+            return logstatus;
+
+        }
+        public string Temperature1(int temperatureValue1)
+        {
+            if (temperatureValue1 > 40)
             {
                 temperatureAlert.TemperatureHighErrorLevel();
             }
-            if (temperatureValue > 0 && temperatureValue < 4)
-            {
-                temperatureAlert.TemperatureLowWarningLevel();
-
-            }
-            else if (temperatureValue < 0)
+            else
+                temperatureAlert.TemperatureHighWarningLevel();
+            logstatus = "Temperature is high error level";
+            return logstatus;
+        }
+        public string Temperature2(int temperatureValue2)
+        {
+            if (temperatureValue2 < 0)
             {
                 temperatureAlert.TemperatureLowErrorLevel();
             }
-
-            
-
-
-
-
+            else
+                temperatureAlert.TemperatureLowWarningLevel();
+            logstatus = "Temperature is low error level";
+            return logstatus;
         }
     }
-    }
+
+}
+    

@@ -1,10 +1,13 @@
 using System;
 using Xunit;
+using TemperatureValueChecker;
 
 namespace Reciever.Tests
 {
     public class Reciever
     {
+        public TemperatureValueChecker checker = new TemperatureValueChecker(); 
+
         public bool alertIsSent = false;
         public string calledMessage;
         public int sentvalue;
