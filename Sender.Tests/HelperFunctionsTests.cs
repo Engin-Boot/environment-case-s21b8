@@ -9,10 +9,18 @@ namespace Sender.Tests
 {
     public class HelperFunctionsTests
     {
+<<<<<<< HEAD
         Sender.HelperFunctions testObject = new HelperFunctions();
         private string emptyTestPath = " ";
         private string validTestPath = @"D:\a\environment-case-s21b8\environment-case-s21b8\TemperatureHumiditySampleData.csv";
         string status;
+=======
+        readonly HelperFunctions _testObject = new HelperFunctions();
+        private readonly string emptyTestPath = " ";
+        private readonly string validTestPath = @"D:\a\environment-case-s21b8\environment-case-s21b8\TemperatureHumiditySampleData.csv";
+        //private readonly string validTestPath = @"C:\Users\320087992\OneDrive - Philips\Desktop\LaunchCase-Study\TemperatureHumiditySampleData.csv";
+        string _status;
+>>>>>>> 4372d634061d6a008642e3ed7e3aa3d453dfc2d3
         [Fact]
         public void ValidatePath_ShouldCheckIfFileExists()
         {
