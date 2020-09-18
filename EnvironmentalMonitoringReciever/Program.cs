@@ -28,7 +28,16 @@ namespace EnvironmentalMonitoringReciever
             internal void Temperatureread(string input)
             {
                 string tmp = input.Split(':')[1].TrimStart();
-                Val = Convert.ToInt32(tmp);
+                try
+                {
+                    Val = Convert.ToInt32(tmp);
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine("Value Not Present");
+                    
+                }
+                
                 TemperatureValueChecker value = new TemperatureValueChecker();
                  value.Temperature(Val);
                 
@@ -37,7 +46,15 @@ namespace EnvironmentalMonitoringReciever
             internal void Humidityread(string input)
             {
                 string tmp = input.Split(':')[1].TrimStart();
-                Val = Convert.ToInt32(tmp);
+                try
+                {
+                    Val = Convert.ToInt32(tmp);
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine("Value Not Present");
+
+                }
                 HumidityValueChecker value = new HumidityValueChecker();
                 value.Humidity(Val);
 
