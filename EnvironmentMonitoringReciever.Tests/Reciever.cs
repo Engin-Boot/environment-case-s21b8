@@ -7,7 +7,7 @@ using Xunit;
 using EnvironmentalMonitoringReciever;
 namespace EnvironmentalMonitoringReciever.Tests
 {
-   
+
     public class EnvironmentalMonitoringReciever
     {
         public int Value;
@@ -17,7 +17,7 @@ namespace EnvironmentalMonitoringReciever.Tests
         {
             TemperatureValueChecker checker = new TemperatureValueChecker();
             Value = 39;
-            Assert.True(checker.Temperature(Value)== "Temperature is in  high warning level");
+            Assert.True(checker.Temperature(Value) == "Temperature is in  high warning level");
         }
         [Fact]
         public void whenTemperatureIsLowWarningLevelThenAlertIsSent()

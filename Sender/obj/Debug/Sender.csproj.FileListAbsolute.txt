@@ -11,4 +11,3 @@ C:\Users\320087877\OneDrive - Philips\Documents\GitHub\environment-case-s21b8\Se
 C:\Users\320087877\OneDrive - Philips\Documents\GitHub\environment-case-s21b8\Sender\obj\Debug\Sender.csproj.CoreCompileInputs.cache
 C:\Users\320087877\OneDrive - Philips\Documents\GitHub\environment-case-s21b8\Sender\obj\Debug\Sender.exe
 C:\Users\320087877\OneDrive - Philips\Documents\GitHub\environment-case-s21b8\Sender\obj\Debug\Sender.pdb
-C:\Users\320087877\OneDrive - Philips\Documents\GitHub\environment-case-s21b8\Sender\obj\Debug\Sender.csprojAssemblyReference.cache
