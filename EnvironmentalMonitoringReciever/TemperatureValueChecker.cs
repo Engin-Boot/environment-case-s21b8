@@ -1,11 +1,10 @@
-﻿using System;
-
-namespace EnvironmentalMonitoringReciever
+﻿namespace EnvironmentalMonitoringReciever
 {
 
     public class TemperatureValueChecker
+
     {
-        string logstatus;
+        string _logstatus;
        TemperatureAlert temperatureAlert = new TemperatureAlert();
         public string Temperature(int temperatureValue)
             {
@@ -13,15 +12,15 @@ namespace EnvironmentalMonitoringReciever
             if (temperatureValue>37 )
             {
                 Temperature1(temperatureValue);
-                logstatus = "Temperature is in  high warning level";
+                _logstatus = "Temperature is in  high warning level";
             }
             if (temperatureValue < 4)
             {
                 Temperature2(temperatureValue);
-                logstatus = "Temperature is in  low warning level";
+                _logstatus = "Temperature is in  low warning level";
             }
             
-            return logstatus;
+            return _logstatus;
 
         }
         public string Temperature1(int temperatureValue1)
@@ -32,8 +31,8 @@ namespace EnvironmentalMonitoringReciever
             }
             else
                 temperatureAlert.TemperatureHighWarningLevel();
-            logstatus = "Temperature is high error level";
-            return logstatus;
+            _logstatus = "Temperature is high error level";
+            return _logstatus;
         }
         public string Temperature2(int temperatureValue2)
         {
@@ -43,8 +42,8 @@ namespace EnvironmentalMonitoringReciever
             }
             else
                 temperatureAlert.TemperatureLowWarningLevel();
-            logstatus = "Temperature is low error level";
-            return logstatus;
+            _logstatus = "Temperature is low error level";
+            return _logstatus;
         }
     }
 

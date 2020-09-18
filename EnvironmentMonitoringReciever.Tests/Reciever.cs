@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using EnvironmentalMonitoringReciever;
 using Xunit;
-using EnvironmentalMonitoringReciever;
-namespace EnvironmentalMonitoringReciever.Tests
+
+namespace EnvironmentMonitoringReciever.Tests
 {
 
     public class EnvironmentalMonitoringReciever
@@ -13,42 +9,42 @@ namespace EnvironmentalMonitoringReciever.Tests
         public int Value;
 
         [Fact]
-        public void whenTemperatureIsHighWarningLevelThenAlertIsSent()
+        public void WhenTemperatureIsHighWarningLevelThenAlertIsSent()
         {
             TemperatureValueChecker checker = new TemperatureValueChecker();
             Value = 39;
             Assert.True(checker.Temperature(Value) == "Temperature is in  high warning level");
         }
         [Fact]
-        public void whenTemperatureIsLowWarningLevelThenAlertIsSent()
+        public void WhenTemperatureIsLowWarningLevelThenAlertIsSent()
         {
             TemperatureValueChecker checker = new TemperatureValueChecker();
             Value = 3;
             Assert.True(checker.Temperature(Value) == "Temperature is in  low warning level");
         }
         [Fact]
-        public void whenTemperatureIsHighErrorLevelThenAlertIsSent()
+        public void WhenTemperatureIsHighErrorLevelThenAlertIsSent()
         {
             TemperatureValueChecker checker = new TemperatureValueChecker();
             Value = 43;
             Assert.True(checker.Temperature1(Value) == "Temperature is high error level");
         }
         [Fact]
-        public void whenTemperatureIsLowErrorLevelThenAlertIsSent()
+        public void WhenTemperatureIsLowErrorLevelThenAlertIsSent()
         {
             TemperatureValueChecker checker = new TemperatureValueChecker();
             Value = -1;
             Assert.True(checker.Temperature2(Value) == "Temperature is low error level");
         }
         [Fact]
-        public void whenHumidityIsHighWarningLevelThenAlertIsSent()
+        public void WhenHumidityIsHighWarningLevelThenAlertIsSent()
         {
             HumidityValueChecker checker = new HumidityValueChecker();
             Value = 71;
             Assert.True(checker.Humidity(Value) == "Humidity is in warning level");
         }
         [Fact]
-        public void whenHumidityIsHighErrorLevelThenAlertIsSent()
+        public void WhenHumidityIsHighErrorLevelThenAlertIsSent()
         {
             HumidityValueChecker checker = new HumidityValueChecker();
             Value = 91;

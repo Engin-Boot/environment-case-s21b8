@@ -1,22 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
-using System.Text;
 
 
 namespace EnvironmentalMonitoringReciever
 {
     class Program
     {
-        static List<string> inputvalues = new List<string>();
+        static readonly List<string> Inputvalues = new List<string>();
 
-        static void Main(string[] args)
+        static void Main()
         {
             string s;
             while ((s = Console.ReadLine()) != null)
             {
                 //Console.WriteLine(s);
-                inputvalues.Add(s);
+                Inputvalues.Add(s);
             }
             ReadConsoleOutput rd = new ReadConsoleOutput();
             rd.ParseInputList();
@@ -26,37 +24,37 @@ namespace EnvironmentalMonitoringReciever
         public class ReadConsoleOutput
         {
 
-            public int val;
-            internal void temperatureread(string input)
+            public int Val;
+            internal void Temperatureread(string input)
             {
                 string tmp = input.Split(':')[1].TrimStart();
-                val = Convert.ToInt32(tmp);
+                Val = Convert.ToInt32(tmp);
                 TemperatureValueChecker value = new TemperatureValueChecker();
-                 value.Temperature(val);
+                 value.Temperature(Val);
                 
 
             }
-            internal void humidityread(string input)
+            internal void Humidityread(string input)
             {
                 string tmp = input.Split(':')[1].TrimStart();
-                val = Convert.ToInt32(tmp);
+                Val = Convert.ToInt32(tmp);
                 HumidityValueChecker value = new HumidityValueChecker();
-                value.Humidity(val);
+                value.Humidity(Val);
 
             }
             public void ParseInputList()
             {
-                foreach (var input in inputvalues)
+                foreach (var input in Inputvalues)
                 {
                     if (input.StartsWith("Temperature"))
                     {
                         ReadConsoleOutput rd = new ReadConsoleOutput();
-                        rd.temperatureread(input);
+                        rd.Temperatureread(input);
                     }
                     if (input.StartsWith("Humidity"))
                     {
                         ReadConsoleOutput rd = new ReadConsoleOutput();
-                        rd.humidityread(input);
+                        rd.Humidityread(input);
                     }
                 }
             }
