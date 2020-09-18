@@ -38,7 +38,7 @@ namespace EnvironmentalMonitoringReciever
                 else
                 {
 
-                    ValueChecker value = new ValueChecker();
+                    TemperatureValueChecker value = new TemperatureValueChecker();
                     value.Temperature(val);
                 }
 
@@ -47,7 +47,7 @@ namespace EnvironmentalMonitoringReciever
             {
                 string tmp = input.Split(':')[1].TrimStart();
                 val = Convert.ToInt32(tmp);
-                ValueChecker value = new ValueChecker();
+                HumidityValueChecker value = new HumidityValueChecker();
                 value.Humidity(val);
 
             }

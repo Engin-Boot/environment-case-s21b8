@@ -1,6 +1,6 @@
 ﻿namespace EnvironmentalMonitoringReciever
 {
-    class ValueChecker
+    class TemperatureValueChecker
     {
         public void Temperature(int temperatureValue)
         {
@@ -25,19 +25,6 @@
           
                
         }
-        public void Humidity(float humidityValue)
-        {
-            HumidityAlert humidityAlert = new HumidityAlert();
-            if(humidityValue>=70)
-            {
-                humidityAlert.HumidityHighWarningLevel();
-            }
-            else if(humidityValue>=90)
-            {
-                humidityAlert.HumidityHighErrorLevel();
-            }
-            
-
-        }
+        
     }
 }
