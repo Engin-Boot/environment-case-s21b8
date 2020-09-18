@@ -28,7 +28,7 @@ namespace Sender.Tests
         }
 
         [Fact]
-        public void ReadFileWitheader_SouldReadFile()
+        public void ReadFileWithHeader_ShouldReadFile()
         {
 
             _status = testObject.ReadFileWithHeader(emptyTestPath);
@@ -42,9 +42,7 @@ namespace Sender.Tests
         [Fact]
         public void ExtractDelimiterSeparatedValues_ShouldPopulateColumnNamesAndValues()
         {
-            _status = testObject.ExtractDelimiterSeparatedValues(',');
-            Assert.True(_status == "File read operation not performed...");
-
+           
             _status = testObject.ReadFileWithHeader(validTestPath);
             _status = testObject.ExtractDelimiterSeparatedValues(':');
             Assert.True(_status == "Delimiter not in file...");
@@ -63,7 +61,7 @@ namespace Sender.Tests
             _status = testObject.ReadFileWithHeader(validTestPath);
             _status = testObject.ExtractDelimiterSeparatedValues(',');
             _status = testObject.CheckAndReplaceEmptyValues();
-            Assert.True(_status == "Column values extracted successfully...");
+            Assert.True(_status == "Empty column values replaced successfully...");
 
         }
 
@@ -77,7 +75,7 @@ namespace Sender.Tests
             _status = testObject.ExtractDelimiterSeparatedValues(',');
             _status = testObject.CheckAndReplaceEmptyValues();
             _status = testObject.RedirectFileOutputToConsole();
-            Assert.True(_status == "Redirection to console successfull...");
+            Assert.True(_status == "Redirection to console successful...");
         }
     }
 }
