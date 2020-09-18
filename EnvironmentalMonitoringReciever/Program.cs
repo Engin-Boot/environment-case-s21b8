@@ -30,17 +30,10 @@ namespace EnvironmentalMonitoringReciever
             internal void temperatureread(string input)
             {
                 string tmp = input.Split(':')[1].TrimStart();
-
-                if ((tmp.Equals(Convert.ToInt32(tmp))))
-                {
-                    Console.WriteLine("Value Not Present");
-                }
-                else
-                {
-
-                    TemperatureValueChecker value = new TemperatureValueChecker();
-                    value.Temperature(val);
-                }
+                val = Convert.ToInt32(tmp);
+                TemperatureValueChecker value = new TemperatureValueChecker();
+                 value.Temperature(val);
+                
 
             }
             internal void humidityread(string input)
@@ -69,60 +62,6 @@ namespace EnvironmentalMonitoringReciever
             }
 
         }
-        //public class Receiver
-        //{
-        //    public readonly StreamReader input;
-        //    public readonly StreamWriter output;
-        //    //public Receiver() : this(Console.In, Console.Out)
-        //    //{
-
-        //    //}
-        //    public Receiver(StreamReader input, StreamWriter output)
-        //    {
-        //        this.input = input;
-        //        this.output = output;
-        //    }
-
-
-        //}
-        //private TextWriter stdOutWriter;
-        //public TextWriter Captured { get; private set; }
-        //public void OutputCapture()
-        //{
-
-        //    this.stdOutWriter = Console.Out;
-        //    Console.SetOut(this);
-        //    Captured = new StringWriter();
-        //}
-
-        //public class OutputCapture : TextWriter, IDisposable
-        //{
-        //    private TextWriter stdOutWriter;
-        //    public TextWriter Captured { get; private set; }
-        //    public override Encoding Encoding { get { return Encoding.ASCII; } }
-
-        //    public OutputCapture()
-        //    {
-        //        this.stdOutWriter = Console.Out;
-        //        Console.SetOut(this);
-        //        Captured = new StringWriter();
-        //    }
-
-        //    override public void Write(string output)
-        //    {
-
-        //        Captured.Write(output);
-        //        stdOutWriter.Write(output);
-        //    }
-
-        //    override public void WriteLine(string output)
-        //    {
-
-        //        Captured.WriteLine(output);
-        //        stdOutWriter.WriteLine(output);
-        //    }
-
-
-        //}
+       
     }
 }
