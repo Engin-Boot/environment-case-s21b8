@@ -11,11 +11,11 @@ namespace EnvironmentalMonitoringReciever
         public void Humidity(float humidityValue)
         {
             HumidityAlert humidityAlert = new HumidityAlert();
-            if (humidityValue >= 70)
+            if (humidityValue > 70)
             {
                 humidityAlert.HumidityHighWarningLevel();
             }
-            else if (humidityValue >= 90)
+            else if (humidityValue > 90)
             {
                 humidityAlert.HumidityHighErrorLevel();
             }
