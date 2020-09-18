@@ -18,3 +18,23 @@ C:\Users\320087992\Documents\Bootcamp\environment-case-s21b8\Sender.Tests\obj\De
 C:\Users\320087992\Documents\Bootcamp\environment-case-s21b8\Sender.Tests\obj\Debug\Sender.Tests.csproj.CopyComplete
 C:\Users\320087992\Documents\Bootcamp\environment-case-s21b8\Sender.Tests\obj\Debug\Sender.Tests.dll
 C:\Users\320087992\Documents\Bootcamp\environment-case-s21b8\Sender.Tests\obj\Debug\Sender.Tests.pdb
+C:\Users\320087877\OneDrive - Philips\Documents\GitHub\environment-case-s21b8\Sender.Tests\bin\Debug\xunit.abstractions.dll
+C:\Users\320087877\OneDrive - Philips\Documents\GitHub\environment-case-s21b8\Sender.Tests\bin\Debug\xunit.runner.visualstudio.testadapter.dll
+C:\Users\320087877\OneDrive - Philips\Documents\GitHub\environment-case-s21b8\Sender.Tests\bin\Debug\xunit.runner.reporters.net452.dll
+C:\Users\320087877\OneDrive - Philips\Documents\GitHub\environment-case-s21b8\Sender.Tests\bin\Debug\xunit.runner.utility.net452.dll
+C:\Users\320087877\OneDrive - Philips\Documents\GitHub\environment-case-s21b8\Sender.Tests\bin\Debug\Sender.Tests.dll
+C:\Users\320087877\OneDrive - Philips\Documents\GitHub\environment-case-s21b8\Sender.Tests\bin\Debug\Sender.Tests.pdb
+C:\Users\320087877\OneDrive - Philips\Documents\GitHub\environment-case-s21b8\Sender.Tests\bin\Debug\Sender.exe
+C:\Users\320087877\OneDrive - Philips\Documents\GitHub\environment-case-s21b8\Sender.Tests\bin\Debug\xunit.assert.dll
+C:\Users\320087877\OneDrive - Philips\Documents\GitHub\environment-case-s21b8\Sender.Tests\bin\Debug\xunit.core.dll
+C:\Users\320087877\OneDrive - Philips\Documents\GitHub\environment-case-s21b8\Sender.Tests\bin\Debug\xunit.execution.desktop.dll
+C:\Users\320087877\OneDrive - Philips\Documents\GitHub\environment-case-s21b8\Sender.Tests\bin\Debug\Sender.pdb
+C:\Users\320087877\OneDrive - Philips\Documents\GitHub\environment-case-s21b8\Sender.Tests\bin\Debug\Sender.exe.config
+C:\Users\320087877\OneDrive - Philips\Documents\GitHub\environment-case-s21b8\Sender.Tests\bin\Debug\xunit.assert.xml
+C:\Users\320087877\OneDrive - Philips\Documents\GitHub\environment-case-s21b8\Sender.Tests\bin\Debug\xunit.core.xml
+C:\Users\320087877\OneDrive - Philips\Documents\GitHub\environment-case-s21b8\Sender.Tests\bin\Debug\xunit.execution.desktop.xml
+C:\Users\320087877\OneDrive - Philips\Documents\GitHub\environment-case-s21b8\Sender.Tests\obj\Debug\Sender.Tests.csprojAssemblyReference.cache
+C:\Users\320087877\OneDrive - Philips\Documents\GitHub\environment-case-s21b8\Sender.Tests\obj\Debug\Sender.Tests.csproj.CoreCompileInputs.cache
+C:\Users\320087877\OneDrive - Philips\Documents\GitHub\environment-case-s21b8\Sender.Tests\obj\Debug\Sender.Tests.csproj.CopyComplete
+C:\Users\320087877\OneDrive - Philips\Documents\GitHub\environment-case-s21b8\Sender.Tests\obj\Debug\Sender.Tests.dll
+C:\Users\320087877\OneDrive - Philips\Documents\GitHub\environment-case-s21b8\Sender.Tests\obj\Debug\Sender.Tests.pdb

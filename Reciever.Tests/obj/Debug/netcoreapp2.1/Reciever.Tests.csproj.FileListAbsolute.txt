@@ -1,0 +1,14 @@
+C:\Users\320087877\OneDrive - Philips\Documents\GitHub\environment-case-s21b8\Reciever.Tests\bin\Debug\netcoreapp2.1\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+C:\Users\320087877\OneDrive - Philips\Documents\GitHub\environment-case-s21b8\Reciever.Tests\bin\Debug\netcoreapp2.1\xunit.runner.reporters.netcoreapp10.dll
+C:\Users\320087877\OneDrive - Philips\Documents\GitHub\environment-case-s21b8\Reciever.Tests\bin\Debug\netcoreapp2.1\xunit.runner.utility.netcoreapp10.dll
+C:\Users\320087877\OneDrive - Philips\Documents\GitHub\environment-case-s21b8\Reciever.Tests\bin\Debug\netcoreapp2.1\Reciever.Tests.deps.json
+C:\Users\320087877\OneDrive - Philips\Documents\GitHub\environment-case-s21b8\Reciever.Tests\bin\Debug\netcoreapp2.1\Reciever.Tests.runtimeconfig.json
+C:\Users\320087877\OneDrive - Philips\Documents\GitHub\environment-case-s21b8\Reciever.Tests\bin\Debug\netcoreapp2.1\Reciever.Tests.runtimeconfig.dev.json
+C:\Users\320087877\OneDrive - Philips\Documents\GitHub\environment-case-s21b8\Reciever.Tests\bin\Debug\netcoreapp2.1\Reciever.Tests.dll
+C:\Users\320087877\OneDrive - Philips\Documents\GitHub\environment-case-s21b8\Reciever.Tests\bin\Debug\netcoreapp2.1\Reciever.Tests.pdb
+C:\Users\320087877\OneDrive - Philips\Documents\GitHub\environment-case-s21b8\Reciever.Tests\obj\Debug\netcoreapp2.1\Reciever.Tests.csprojAssemblyReference.cache
+C:\Users\320087877\OneDrive - Philips\Documents\GitHub\environment-case-s21b8\Reciever.Tests\obj\Debug\netcoreapp2.1\Reciever.Tests.csproj.CoreCompileInputs.cache
+C:\Users\320087877\OneDrive - Philips\Documents\GitHub\environment-case-s21b8\Reciever.Tests\obj\Debug\netcoreapp2.1\Reciever.Tests.AssemblyInfoInputs.cache
+C:\Users\320087877\OneDrive - Philips\Documents\GitHub\environment-case-s21b8\Reciever.Tests\obj\Debug\netcoreapp2.1\Reciever.Tests.AssemblyInfo.cs
+C:\Users\320087877\OneDrive - Philips\Documents\GitHub\environment-case-s21b8\Reciever.Tests\obj\Debug\netcoreapp2.1\Reciever.Tests.dll
+C:\Users\320087877\OneDrive - Philips\Documents\GitHub\environment-case-s21b8\Reciever.Tests\obj\Debug\netcoreapp2.1\Reciever.Tests.pdb
