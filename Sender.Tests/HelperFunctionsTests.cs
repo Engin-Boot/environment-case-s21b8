@@ -9,18 +9,13 @@ namespace Sender.Tests
 {
     public class HelperFunctionsTests
     {
-<<<<<<< HEAD
+
         Sender.HelperFunctions testObject = new HelperFunctions();
         private string emptyTestPath = " ";
         private string validTestPath = @"D:\a\environment-case-s21b8\environment-case-s21b8\TemperatureHumiditySampleData.csv";
-        string status;
-=======
-        readonly HelperFunctions _testObject = new HelperFunctions();
-        private readonly string emptyTestPath = " ";
-        private readonly string validTestPath = @"D:\a\environment-case-s21b8\environment-case-s21b8\TemperatureHumiditySampleData.csv";
         //private readonly string validTestPath = @"C:\Users\320087992\OneDrive - Philips\Desktop\LaunchCase-Study\TemperatureHumiditySampleData.csv";
         string _status;
->>>>>>> 4372d634061d6a008642e3ed7e3aa3d453dfc2d3
+
         [Fact]
         public void ValidatePath_ShouldCheckIfFileExists()
         {
@@ -36,53 +31,53 @@ namespace Sender.Tests
         public void ReadFileWitheader_SouldReadFile()
         {
 
-            status = testObject.ReadFileWithHeader(emptyTestPath);
-            Assert.True(status == "File not found in the specified path...");
+            _status = testObject.ReadFileWithHeader(emptyTestPath);
+            Assert.True(_status == "File not found in the specified path...");
 
 
-            status = testObject.ReadFileWithHeader(validTestPath);
-            Assert.True(status == "File read successfully!");
+            _status = testObject.ReadFileWithHeader(validTestPath);
+            Assert.True(_status == "File read successfully!");
         }
 
         [Fact]
         public void ExtractDelimiterSeparatedValues_ShouldPopulateColumnNamesAndValues()
         {
-            status = testObject.ExtractDelimiterSeparatedValues(',');
-            Assert.True(status == "File read operation not performed...");
+            _status = testObject.ExtractDelimiterSeparatedValues(',');
+            Assert.True(_status == "File read operation not performed...");
 
-            status = testObject.ReadFileWithHeader(validTestPath);
-            status = testObject.ExtractDelimiterSeparatedValues(':');
-            Assert.True(status == "Delimiter not in file...");
+            _status = testObject.ReadFileWithHeader(validTestPath);
+            _status = testObject.ExtractDelimiterSeparatedValues(':');
+            Assert.True(_status == "Delimiter not in file...");
 
-            status = testObject.ExtractDelimiterSeparatedValues(',');
-            Assert.True(status == "Correct delimiter supplied...");
+            _status = testObject.ExtractDelimiterSeparatedValues(',');
+            Assert.True(_status == "Correct delimiter supplied...");
         }
 
         [Fact]
         public void CheckAndReplaceEmptyValues_ShouldReplaceEmptyValueWithMessage()
         {
 
-            status = testObject.CheckAndReplaceEmptyValues();
-            Assert.True(status == "Column Values not extracted...");
+            _status = testObject.CheckAndReplaceEmptyValues();
+            Assert.True(_status == "Column Values not extracted...");
 
-            status = testObject.ReadFileWithHeader(validTestPath);
-            status = testObject.ExtractDelimiterSeparatedValues(',');
-            status = testObject.CheckAndReplaceEmptyValues();
-            Assert.True(status == "Column values extracted successfully...");
+            _status = testObject.ReadFileWithHeader(validTestPath);
+            _status = testObject.ExtractDelimiterSeparatedValues(',');
+            _status = testObject.CheckAndReplaceEmptyValues();
+            Assert.True(_status == "Column values extracted successfully...");
 
         }
 
         [Fact]
         public void RedirectFileOutputToConsole_ShouldWriteToConsole()
         {
-            status = testObject.RedirectFileOutputToConsole();
-            Assert.True(status == "No column values present. Cannot redirect output to console...");
+            _status = testObject.RedirectFileOutputToConsole();
+            Assert.True(_status == "No column values present. Cannot redirect output to console...");
 
-            status = testObject.ReadFileWithHeader(validTestPath);
-            status = testObject.ExtractDelimiterSeparatedValues(',');
-            status = testObject.CheckAndReplaceEmptyValues();
-            status = testObject.RedirectFileOutputToConsole();
-            Assert.True(status == "Redirection to console successfull...");
+            _status = testObject.ReadFileWithHeader(validTestPath);
+            _status = testObject.ExtractDelimiterSeparatedValues(',');
+            _status = testObject.CheckAndReplaceEmptyValues();
+            _status = testObject.RedirectFileOutputToConsole();
+            Assert.True(_status == "Redirection to console successfull...");
         }
     }
 }
