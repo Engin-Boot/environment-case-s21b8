@@ -6,7 +6,7 @@ namespace EnvironmentalMonitoringReciever
 {
     class Program
     {
-        static readonly List<string> Inputvalues = new List<string>();
+        private static readonly List<string> Inputvalues = new List<string>();
 
         static void Main()
         {
@@ -25,14 +25,14 @@ namespace EnvironmentalMonitoringReciever
         {
 
             public int Val;
-            internal void Temperatureread(string input)
+            internal void ReadTemperature(string input)
             {
                 string tmp = input.Split(':')[1].TrimStart();
                 try
                 {
                     Val = Convert.ToInt32(tmp);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     Console.WriteLine("Value Not Present");
                     
@@ -43,14 +43,14 @@ namespace EnvironmentalMonitoringReciever
                 
 
             }
-            internal void Humidityread(string input)
+            internal void ReadHumidity(string input)
             {
                 string tmp = input.Split(':')[1].TrimStart();
                 try
                 {
                     Val = Convert.ToInt32(tmp);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     Console.WriteLine("Value Not Present");
 
@@ -66,12 +66,12 @@ namespace EnvironmentalMonitoringReciever
                     if (input.StartsWith("Temperature"))
                     {
                         ReadConsoleOutput rd = new ReadConsoleOutput();
-                        rd.Temperatureread(input);
+                        rd.ReadTemperature(input);
                     }
                     if (input.StartsWith("Humidity"))
                     {
                         ReadConsoleOutput rd = new ReadConsoleOutput();
-                        rd.Humidityread(input);
+                        rd.ReadHumidity(input);
                     }
                 }
             }

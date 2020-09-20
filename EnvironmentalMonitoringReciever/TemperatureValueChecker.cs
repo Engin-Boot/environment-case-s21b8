@@ -4,46 +4,46 @@
     public class TemperatureValueChecker
 
     {
-        string _logstatus;
-       TemperatureAlert temperatureAlert = new TemperatureAlert();
+        private string _logStatus;
+        readonly TemperatureAlert _temperatureAlert = new TemperatureAlert();
         public string Temperature(int temperatureValue)
             {
 
             if (temperatureValue>37 )
             {
                 Temperature1(temperatureValue);
-                _logstatus = "Temperature is in  high warning level";
+                _logStatus = "Temperature is in  high warning level";
             }
             if (temperatureValue < 4)
             {
                 Temperature2(temperatureValue);
-                _logstatus = "Temperature is in  low warning level";
+                _logStatus = "Temperature is in  low warning level";
             }
             
-            return _logstatus;
+            return _logStatus;
 
         }
         public string Temperature1(int temperatureValue1)
         {
             if (temperatureValue1 > 40)
             {
-                temperatureAlert.TemperatureHighErrorLevel();
+                _temperatureAlert.TemperatureHighErrorLevel();
             }
             else
-                temperatureAlert.TemperatureHighWarningLevel();
-            _logstatus = "Temperature is high error level";
-            return _logstatus;
+                _temperatureAlert.TemperatureHighWarningLevel();
+            _logStatus = "Temperature is high error level";
+            return _logStatus;
         }
         public string Temperature2(int temperatureValue2)
         {
             if (temperatureValue2 < 0)
             {
-                temperatureAlert.TemperatureLowErrorLevel();
+                _temperatureAlert.TemperatureLowErrorLevel();
             }
             else
-                temperatureAlert.TemperatureLowWarningLevel();
-            _logstatus = "Temperature is low error level";
-            return _logstatus;
+                _temperatureAlert.TemperatureLowWarningLevel();
+            _logStatus = "Temperature is low error level";
+            return _logStatus;
         }
     }
 
