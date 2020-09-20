@@ -123,7 +123,7 @@ namespace Sender
 
 
         #region WriteToconsole Function: prints to console
-        public void WriteToConsole(string columnName, string value)
+        private void WriteToConsole(string columnName, string value)
         {
             Console.WriteLine(columnName + ": " + value + " ");
         }
@@ -134,7 +134,7 @@ namespace Sender
 
         #region constants
 
-        public const string ValueNotPresent = "Value Not Present";
+        private const string ValueNotPresent = "Value Not Present";
         #endregion
 
         #region variables
@@ -142,8 +142,8 @@ namespace Sender
         private string _line;
         private readonly Dictionary<int, string> _fileContents = new Dictionary<int, string>();
         private string[] _columnNames = { };
-        public string[] Values;
-        private int _noOfColumns = 0;
+        public string[] Values { get; set; }
+        private int _noOfColumns;
         private string _status = "";
         private readonly List<string> _columnValues = new List<string>();
         #endregion

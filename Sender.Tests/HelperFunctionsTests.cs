@@ -1,16 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Xunit;
+﻿using Xunit;
 
 namespace Sender.Tests
 {
     public class HelperFunctionsTests
     {
 
-        Sender.HelperFunctions testObject = new HelperFunctions();
+        HelperFunctions testObject = new HelperFunctions();
         private string emptyTestPath = " ";
         private string validTestPath = @"D:\a\environment-case-s21b8\environment-case-s21b8\TemperatureHumiditySampleData.csv";
         //private readonly string validTestPath = @"C:\Users\320087992\OneDrive - Philips\Desktop\LaunchCase-Study\TemperatureHumiditySampleData.csv";
