@@ -142,7 +142,7 @@ namespace Sender
         private string _line;
         private readonly Dictionary<int, string> _fileContents = new Dictionary<int, string>();
         private string[] _columnNames = { };
-        public string[] Values { get; set; }
+        private string[] Values { get; set; }
         private int _noOfColumns;
         private string _status = "";
         private readonly List<string> _columnValues = new List<string>();

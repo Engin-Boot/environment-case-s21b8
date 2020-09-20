@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace EnvironmentalMonitoringReciever
 {
-    class Program
+    abstract class Program
     {
         private static readonly List<string> InputValues = new List<string>();
 
@@ -24,13 +24,13 @@ namespace EnvironmentalMonitoringReciever
         private class ReadConsoleOutput
         {
 
-            private int Val;
+            private int _val;
             private void ReadTemperature(string input)
             {
                 string tmp = input.Split(':')[1].TrimStart();
                 try
                 {
-                    Val = Convert.ToInt32(tmp);
+                    _val = Convert.ToInt32(tmp);
                 }
                 catch (Exception)
                 {
@@ -39,7 +39,7 @@ namespace EnvironmentalMonitoringReciever
                 }
                 
                 TemperatureValueChecker value = new TemperatureValueChecker();
-                 value.Temperature(Val);
+                 value.Temperature(_val);
                 
 
             }
@@ -48,7 +48,7 @@ namespace EnvironmentalMonitoringReciever
                 string tmp = input.Split(':')[1].TrimStart();
                 try
                 {
-                    Val = Convert.ToInt32(tmp);
+                    _val = Convert.ToInt32(tmp);
                 }
                 catch (Exception)
                 {
@@ -56,7 +56,7 @@ namespace EnvironmentalMonitoringReciever
 
                 }
                 HumidityValueChecker value = new HumidityValueChecker();
-                value.Humidity(Val);
+                value.Humidity(_val);
 
             }
             public void ParseInputList()

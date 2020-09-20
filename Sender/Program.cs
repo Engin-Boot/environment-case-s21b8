@@ -1,7 +1,8 @@
 using System;
 namespace Sender
 {
-    class Program
+    
+    abstract class Program
     {
         static void Main()
         {
@@ -18,4 +19,6 @@ namespace Sender
             
         }
     }
+
+    
 }
