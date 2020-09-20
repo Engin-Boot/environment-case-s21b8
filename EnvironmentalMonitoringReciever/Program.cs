@@ -66,7 +66,7 @@ namespace EnvironmentalMonitoringReciever
                     if (input.StartsWith("Humidity"))
                     {
                         ReadConsoleOutput rd = new ReadConsoleOutput();
-                        rd.ReadHumidity();
+                        rd.ReadHumidity(input);
                     }
                 }
             }
