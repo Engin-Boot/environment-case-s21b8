@@ -6,7 +6,7 @@ namespace EnvironmentalMonitoringReciever
 {
     class Program
     {
-        private static readonly List<string> Inputvalues = new List<string>();
+        private static readonly List<string> InputValues = new List<string>();
 
         static void Main()
         {
@@ -14,18 +14,18 @@ namespace EnvironmentalMonitoringReciever
             while ((s = Console.ReadLine()) != null)
             {
                 //Console.WriteLine(s);
-                Inputvalues.Add(s);
+                InputValues.Add(s);
             }
             ReadConsoleOutput rd = new ReadConsoleOutput();
             rd.ParseInputList();
 
         }
 
-        public class ReadConsoleOutput
+        private class ReadConsoleOutput
         {
 
-            public int Val;
-            internal void ReadTemperature(string input)
+            private int Val;
+            private void ReadTemperature(string input)
             {
                 string tmp = input.Split(':')[1].TrimStart();
                 try
@@ -43,7 +43,7 @@ namespace EnvironmentalMonitoringReciever
                 
 
             }
-            internal void ReadHumidity(string input)
+            private void ReadHumidity(string input)
             {
                 string tmp = input.Split(':')[1].TrimStart();
                 try
@@ -61,7 +61,7 @@ namespace EnvironmentalMonitoringReciever
             }
             public void ParseInputList()
             {
-                foreach (var input in Inputvalues)
+                foreach (var input in InputValues)
                 {
                     if (input.StartsWith("Temperature"))
                     {
