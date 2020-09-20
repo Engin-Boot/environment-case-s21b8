@@ -27,23 +27,13 @@ namespace EnvironmentalMonitoringReciever
             private int _val;
             private void ReadTemperature(string input)
             {
-                string tmp = input.Split(':')[1].TrimStart();
-                try
-                {
-                    _val = Convert.ToInt32(tmp);
-                }
-                catch (Exception)
-                {
-                    Console.WriteLine("Value Not Present");
-                    
-                }
-                
                 TemperatureValueChecker value = new TemperatureValueChecker();
-                 value.Temperature(_val);
-                
 
+                TrimInputToGetValue(input);
+                value.Temperature(_val);
             }
-            private void ReadHumidity(string input)
+
+            private void TrimInputToGetValue(string input)
             {
                 string tmp = input.Split(':')[1].TrimStart();
                 try
@@ -55,7 +45,12 @@ namespace EnvironmentalMonitoringReciever
                     Console.WriteLine("Value Not Present");
 
                 }
+            }
+
+            private void ReadHumidity(string input)
+            {
                 HumidityValueChecker value = new HumidityValueChecker();
+                TrimInputToGetValue(input);
                 value.Humidity(_val);
 
             }
@@ -71,7 +66,7 @@ namespace EnvironmentalMonitoringReciever
                     if (input.StartsWith("Humidity"))
                     {
                         ReadConsoleOutput rd = new ReadConsoleOutput();
-                        rd.ReadHumidity(input);
+                        rd.ReadHumidity();
                     }
                 }
             }
