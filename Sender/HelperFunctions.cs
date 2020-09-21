@@ -107,6 +107,10 @@ namespace Sender
                 for (int i = 0; i < _columnValues.Count; i++)
                 {
                     int column = i % _noOfColumns;
+
+                    // sleep for 5 sec
+                    // System.Threading.Thread.Sleep(5000);
+
                     WriteToConsole(_columnNames[column], _columnValues[i]);
                 }
                 _status = "Redirection to console successful...";
