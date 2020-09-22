@@ -4,7 +4,7 @@ namespace Sender
     
     abstract class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
             
             var validTestPath = @"D:\a\environment-case-s21b8\environment-case-s21b8\TemperatureHumiditySampleData.csv";

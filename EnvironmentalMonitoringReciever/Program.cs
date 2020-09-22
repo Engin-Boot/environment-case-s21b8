@@ -13,7 +13,6 @@ namespace EnvironmentalMonitoringReciever
             string s;
             while ((s = Console.ReadLine()) != null)
             {
-                //Console.WriteLine(s);
                 InputValues.Add(s);
             }
             ReadConsoleOutput rd = new ReadConsoleOutput();
